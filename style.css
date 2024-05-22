@@ -1,0 +1,209 @@
+/* Add styles here */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+body {
+    font-family: 'open sans', sans-serif;
+    background: #f9f9f9 url('imagenes/pexels-life-of-pix-7974.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.container {
+    margin: auto;
+    /* margin: 20px; */
+    width: 90%;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+/* tamaño del logo */
+.logo img {
+    width: 20%;
+}
+
+/* tamaño de la imagen  */
+.thumb img {
+    width: 50%;
+}
+
+header {
+    width: 100%;
+    padding: 50px 0;
+    display: flex;
+    /* menu en horizontal */
+    flex-direction: row;
+    /* menu hacia la derecha */
+    justify-content: space-between;
+    /* centrar verticalmente */
+    align-items: center;
+}
+
+/* alinear el nav de manera horizontal */
+header nav.menu {
+    display: flex;
+}
+
+header .menu a {
+    color: #f9f9f9;
+    text-decoration: none;
+    margin-right: 40px;
+    font-size: 18px;
+}
+
+header .menu a:hover {
+    text-decoration: underline;
+}
+
+.main {
+    background: #fff;
+    padding: 20px;
+    width: 70%;
+}
+
+.main article .thumb {
+    margin-bottom: 20px;
+}
+
+.main article .thumb img {
+    width: 100%;
+    vertical-align: top;
+}
+
+.main article h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: normal;
+}
+
+.main article p {
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 27px;
+    /* es una propiedad CSS que especifica el espacio
+    vertical entre líneas de texto. 
+    Se utiliza para controlar la cantidad de espacio entre 
+    las líneas base de líneas de texto adyacentes. */
+}
+
+aside {
+    width: 30%;
+    background: #537dca;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+aside .widget {
+    margin-bottom: 20px;
+}
+
+aside .ad {
+    font-size: 30px;
+    text-align: center;
+    color: #fff;
+    padding: 50px 0;
+    background: #4264a2;
+    /* margin: 20px 0; */
+}
+
+footer{
+    margin: 20px 0;
+    background: rgba(255, 255, 255, .2);
+    padding: 20px;
+    width: 100%;
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+footer .redes-sociales a{
+    color:#fff;
+    text-decoration: underline;
+    margin-left: 20px;
+}
+
+footer .redes-sociales a:hover{
+    text-decoration: none;
+}
+
+@media screen and (max-width: 768px) {
+    /* .container {
+        flex-direction: column;
+    } */
+
+    .main {
+        width: 100%;
+    }
+
+    aside {
+        width: 100%;
+        flex-direction: row;
+    }
+    aside .ad{
+        width: 40%;
+    }
+    
+    /* header {
+        flex-direction: column;
+    } */
+
+    header .logo {
+        margin-bottom: 20px;
+    } 
+
+    header .menu a {
+        margin-right: 20px;
+    } 
+}
+
+@media screen and (max-width: 600px) {
+    header {
+        flex-direction: column;
+        padding-bottom: 20;
+    }
+
+    header .menu {
+        width: 100%;
+        background: rgba(255, 255, 255, .2);
+        text-align: center;
+        padding: 20px;
+    }
+    header .menu a {
+        margin: 0 20px;
+    } 
+    header .logo {
+        margin-bottom: 20px;
+    }
+
+    footer{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    footer .autor{
+        order: 2;
+        
+    }
+    footer .redes-sociales{
+        order: 1;
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    aside {
+        display: none;
+    }
+}
